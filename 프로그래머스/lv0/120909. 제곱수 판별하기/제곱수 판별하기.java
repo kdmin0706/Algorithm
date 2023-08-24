@@ -2,6 +2,8 @@ import java.util.*;
 
 class Solution {
     public int solution(int n) {
+        
+        //방법 1
         int answer = 1;
         while(true){
             int result = (int)Math.pow(answer,2);
@@ -17,6 +19,12 @@ class Solution {
             answer++;
         }
         
+        //방법2
+        if(n % Math.sqrt(n) == 0){
+            answer = 1;
+        } else{
+            answer = 2;
+        }
         
         return answer;
     }
